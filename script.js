@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
 
-   function addTask() {
+   function addTask(taskText, save = true) {
         const taskText = taskInput.value.trim(); // Trim whitespace
         if (taskText === '') {// Prevent adding empty tasks
             alert('Please enter a task.');
@@ -31,4 +31,5 @@ document.addEventListener('DOMContentLoaded', function() {
             addTask();
         }
     });
+    //check local storage for an existing list of tasks
 });
